@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  background: #12141c;
+  color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 56px;
+  margin: 0 0 32px;
+}
+
+.card {
+  background: #1c1f2a;
+  border: 1px solid #2d3140;
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.checkbox-pill {
+  background: #2a2e3b;
+  border-radius: 999px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  background: #6d6f78;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #858894;
+}
+
+.dish-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid #2d3140;
+}
+
+.dish-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+select {
+  width: 100%;
+  max-width: 360px;
+  padding: 8px;
+  border-radius: 8px;
+  background: #2a2e3b;
+  color: white;
+}
+
+.week-row {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.result {
+  border: 2px solid #6d8cff;
+}
+
+.categories-info {
+  margin-top: 16px;
+}

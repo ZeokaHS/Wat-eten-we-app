@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import "/node_modules/flag-icons/css/flag-icons.min.css";
 
 function haalOpUitOpslag(key, fallback) {
   const opgeslagen = localStorage.getItem(key);
@@ -13,8 +14,10 @@ function haalOpUitOpslag(key, fallback) {
 
 const startGerechten = [
   {
-    naam: "Bootje hete kip (2 personen)",
-    categorieen: ["Kip"],
+    naam: "🐔 Bootje hete kip (2 personen)",
+    vlag: "/flags/sr.svg",
+    afbeelding: "/dishes/bootjehetekip.jpg",
+    categorieen: ["Kip 🐔"],
     ingredienten: ["400 gram kippendij", "4 eetlepels ketjap", "5 eetlepels sweet chilisaus", "sambal naar smaak", "1 eetlepel pindakaas", "zonnebloemolie", "2 teentjes knoflook", "1 paprika", "1 rode ui", "pita broodjes", "ijsbergsla"],
     recept: [
   "Snij de rode ui in kleine stukjes en de paprika in reepjes. (of ook in kleine stukjes als je dat lekkerder vindt! Reepjes hebben mijn voorkeur in dit recept)",
@@ -28,8 +31,10 @@ const startGerechten = [
 ],
   },
   {
-    naam: "Kaiserschmarnn",
-    categorieen: ["Vegetarisch"],
+    naam: "🌿 Kaiserschmarnn",
+    vlag: "/flags/at.svg",
+    afbeelding: "/dishes/kaiserschmarnn.jpg",
+    categorieen: ["Vegetarisch 🌿"],
     ingredienten: ["4 eieren", "50g kristalsuiker", "zakje vanillesuiker", "100g bloem", "100 ml melk", "Vanille aroma", "eventueel vleugje kaneel", "zonnebloemolie of boter om mee te bakken"],
     recept: [
   "Pak twee kommen.",
@@ -41,9 +46,11 @@ const startGerechten = [
 ],
   },
   {
-    naam: "TraTimtionele pasta",
-    categorieen: ["Pasta", "Gehakt"],
-    ingredienten: ["4 wortels", "2 stengels bleekselderij", "3 uien", "1 kilo gehakt", "Klein flesje rode wijn 250ml", "2 bouillon blokjes in 150ml water", "300 ml creme fraiche (je kunt ook slagroom of beiden gebruiken)", "Muchos peper", "690 gram passata", "390 gram tomatenblokjes", "Flinke scheut ketjap manis", "Olijfolie", "Pasta naar keuze"],
+    naam: "🐮🍝 TraTimtionele pasta",
+    vlag: "/flags/it.svg",
+    afbeelding: "/dishes/tratimtionelepasta.jpg",
+    categorieen: ["Pasta 🍝", "Gehakt 🐮"],
+    ingredienten: ["4 wortels", "2 stengels bleekselderij", "3 uien", "1 kilo gehakt", "Klein flesje rode wijn 250ml", "2 bouillon blokjes in 150ml water", "300 ml creme fraiche (je kunt ook slagroom of beiden gebruiken)", "Muchos peper", "690 gram passata", "390 gram tomatenblokjes", "Flinke scheut ketjap manis", "Olijfolie", "Pasta 🍝 naar keuze"],
     recept: [
   "Hak de wortels, bleekselderij en uien fijn. Eventueel kun je dit pureren.",
   "Olijfolie in de pan, sofrito erin en goed glazig bakken zoals met ui.",
@@ -56,152 +63,261 @@ const startGerechten = [
 ],
   },
   {
-    naam: "Oma's spaghetti",
-    categorieen: ["Pasta", "Gehakt"],
+    naam: "🐮🍝 Oma's spaghetti",
+    vlag: "/flags/it.svg",
+    afbeelding: "/dishes/omasspaghetti.jpg",
+    categorieen: ["Pasta 🍝", "Gehakt 🐮"],
+    ingredienten: ["500 gram Gehakt", "1 Ui", "Scheutje olijfolie", "Pasta naar keuze", "Scheutje ketjap", "2 blikjes tomatenpuree", "Eventueel paprika", "Eventueel courgette", "Eventueel champignons", "Peper", "Paprikapoeder", "Kurkuma", "Bouillonblokje"],
+    recept: [
+  "Hak de groentes in stukken, grootte naar keuze.",
+  "Doe een scheutje olijfolie in de pan en laat warm worden.",
+  "Zet een pan op met water om voor te bereiden voor de pasta en voeg een bouillonblokje toe. Bij voorkeur bouillonblokje kip.",
+  "Volg de volgende stappen maar wanneer het water begint te koken voeg je de pasta toe.",
+  "Let op dat wanneer je de pasta in de pan kookt je de kooktijd van de pasta aanhoudt en het dan afgiet. Zet bij voorkeur een wekker.",
+  "Als de pasta klaar is dan giet je deze af en kun je het in een vergiet laten staan met een deksel erop als je eerder bent dan je andere stappen.",
+  "Doe de gehakte ui in de pan en bak glazig.",
+  "Voeg het gehakt toe en voeg peper, paprikapoeder en kurkuma toe naar smaak gevolgd door een scheut ketjap.",
+  "Als je nog meer groentes gaat gebruiken mogen die er nu bij in.",
+  "Voeg de inhoud van de blikjes tomatenpuree toe.",
+  "Laat dit allemaal samen nog even doorbakken tot de groentes eruit zien alsof ze niet meer rauw zijn en de tomatenpuree de kans heeft gehad om goed op te warmen.",
+  "Voeg de pasta toe aan je saus en meng met elkaar.",
+  "Eet smakelijk!"
+],
+  },
+  {
+    naam: "🐷🍝 Pasta carbonara",
+    vlag: "/flags/it.svg",
+    afbeelding: "/dishes/pastacarbonara.jpg",
+    categorieen: ["Pasta 🍝", "Varken 🐷"],
+    ingredienten: ["2 pakken pancetta", "2 eieren", "Peper", "Pasta naar keuze", "Rucola", "Parmezaanse kaas", "Olijfolie", "1 ui", "3 teentjes knoflook"],
+    recept: [
+  "Hak de ui, knoflook en pancetta.",
+  "Maak een mengsel van 2 eieren, parmezaanse kaas en heel veel peper.",
+  "Zet een pan op met water en voeg de pasta toe als het water kookt.",
+  "Doe een scheut olijfolie in de pan en laat warm worden.",
+  "Voeg de ui en de helft van de knoflook toe en bak glazig",
+  "Voeg de pancetta toe en laat bakken",
+  "Voeg twee á drie scheppen pasta water toe bij de uien, knoflook en pancetta en laat uitkoken. Je zult een dikkere textuur overhouden voor de saus hierdoor.",
+  "Zet het vuur uit en voeg het eimengsel toe. Meteen goed roeren!",
+  "Voeg de pasta toe en meng het allemaal samen.",
+  "Extra stap voor Nadia: Voeg de rucola toe op je bord.",
+  "Eet smakelijk!",
+  "Eventueel: Voeg extra peper toe op je bord. Heerlijk!"
+],
+  },
+  {
+    naam: "🐮🍙 Bobotie (Under construction)",
+    vlag: "/flags/za.svg",
+    afbeelding: "/dishes/bobotie.jpg",
+    categorieen: ["Rijst 🍙", "Gehakt 🐮"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Pasta carbonara",
-    categorieen: ["Pasta", "Varken"],
+    naam: "🐔 Shoarma",
+    vlag: "/flags/tr.svg",
+    afbeelding: "/dishes/shoarma.jpg",
+    categorieen: ["Kip 🐔"],
+    ingredienten: ["500 gram kipshoarma", "Pita", "1 rode ui", "1 paprika", "Sla", "1/2 komkommer", "Scheutje zonnebloemolie", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus"],
+    recept: [
+  "Snijd alle groentes.",
+  "Voeg de knoflook, yoghurt, honing, peterselie, bieslook en dille samen voor een heerlijke knoflooksaus. Wij mengen dit vaak met een knoflooksaus uit een pot.",
+  "Zet een pan op het vuur met een scheutje zonnebloemolie.",
+  "Bak de kipshoarma op.",
+  "Voeg de helft van de paprika en de rode ui toe en bak mee.",
+  "Verwarm de oven voor op 200 graden en bak de pita's in 5 minuten af.",
+  "Snijd de pita's over en stop de pita's vol met shoarma en rauwe groentes.",
+  "Eet smakelijk!",
+  "Tip voor als je Tim bent: Je kunt dit ook omtoveren tot een salade en het pita broodje aan de zijkant nemen."
+],
+  },
+  {
+    naam: "🥔🐟 Gebakken aardappelen met panga",
+    vlag: "/flags/nl.svg",
+    afbeelding: "/dishes/gebakkenaardappelenpanga.jpg",
+    categorieen: ["Aardappelen 🥔", "Vis 🐟"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Bobotie",
-    categorieen: ["Rijst", "Gehakt"],
+    naam: "🥔🐟 Gebakken aardappelen met zalm",
+    vlag: "/flags/no.svg",
+    afbeelding: "/dishes/gebakkenaardappelenzalm.jpg",
+    categorieen: ["Aardappelen 🥔", "Vis 🐟"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Shoarma",
-    categorieen: ["Kip"],
+    naam: "🥔🐔 Gebakken aardappelen met schnitzel",
+    vlag: "/flags/at.svg",
+    afbeelding: "/dishes/gebakkenaardappelenschnitzel.jpg",
+    categorieen: ["Aardappelen 🥔", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Gebakken aardappelen met panga",
-    categorieen: ["Aardappelen", "Vis"],
+    naam: "🌿 Pannekoeken",
+    vlag: "/flags/nl.svg",
+    afbeelding: "/dishes/pannekoeken.jpg",
+    categorieen: ["Vegetarisch 🌿"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Gebakken aardappelen met zalm",
-    categorieen: ["Aardappelen", "Vis"],
+    naam: "🐔🍙 Kip Rezala",
+    vlag: "/flags/in.svg",
+    afbeelding: "/dishes/rezala.jpg",
+    categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Gebakken aardappelen met schnitzel",
-    categorieen: ["Aardappelen", "Kip"],
+    naam: "🐔🍙 Butter Chicken",
+    vlag: "/flags/in.svg",
+    afbeelding: "/dishes/butterchicken.jpg",
+    categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Pannekoeken",
-    categorieen: ["Vegetarisch"],
+    naam: "🐔🍙 Tikka Masala",
+    vlag: "/flags/gb.svg",
+    afbeelding: "/dishes/tikkamasala.jpg",
+    categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Kip Rezala",
-    categorieen: ["Rijst", "Kip"],
+    naam: "🍤🍝 Garnalen pasta in roomsaus",
+    vlag: "/flags/gb.svg",
+    afbeelding: "/dishes/garnalenroompasta.jpg",
+    categorieen: ["Pasta 🍝", "Garnalen 🍤"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Butter Chicken",
-    categorieen: ["Rijst", "Kip"],
+    naam: "🐔🍱 Bami",
+    vlag: "/flags/cn.svg",
+    afbeelding: "/dishes/bami.jpg",
+    categorieen: ["Mie 🍱", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Tikka Masala",
-    categorieen: ["Rijst", "Kip"],
+    naam: "🐔🌯 Quesadillas met kip",
+    vlag: "/flags/mx.svg",
+    afbeelding: "/dishes/quesadillaskip.jpg",
+    categorieen: ["Kip 🐔", "Wraps 🌯"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Pasta met garnalen",
-    categorieen: ["Pasta", "Garnalen"],
+    naam: "🐮 Quesadillas met gehakt",
+    vlag: "/flags/mx.svg",
+    afbeelding: "/dishes/quesadillasgehakt.jpg",
+    categorieen: ["Gehakt 🐮"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Bami",
-    categorieen: ["Mie", "Kip"],
+    naam: "🐮 Mexicaanse schotel",
+    vlag: "/flags/mx.svg",
+    afbeelding: "/dishes/mexicaanseschotel.jpg",
+    categorieen: ["Gehakt 🐮"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Quessadillas met kip",
-    categorieen: ["Kip"],
+    naam: "🐔🍙 Omurice",
+    vlag: "/flags/jp.svg",
+    afbeelding: "/dishes/omurice.jpg",
+    categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
   {
-    naam: "Quessadillas met gehakt",
-    categorieen: ["Gehakt"],
-    ingredienten: ["Volgt nog"],
-    recept: [
-  "Recept volgt nog."
-],
-  },
-  {
-    naam: "Mexicaanse schotel",
-    categorieen: ["Gehakt"],
-    ingredienten: ["Volgt nog"],
-    recept: [
-  "Recept volgt nog."
-],
-  },
-  {
-    naam: "Omurice",
-    categorieen: ["Rijst", "Kip"],
-    ingredienten: ["Volgt nog"],
-    recept: [
-  "Recept volgt nog."
-],
-  },
-  {
-    naam: "Kip met honingtijm en sinaasappel",
-    categorieen: ["Rijst", "Kip"],
+    naam: "🐔🍙 Kip met honingtijm en sinaasappel",
+    vlag: "/flags/fr.svg",
+    afbeelding: "/dishes/kiphoningtijmsinaasappelrijst.jpg",
+    categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
 ],
   },
     {
-    naam: "Varkenshaas met rijst",
-    categorieen: ["Rijst", "Varken"],
+    naam: "🐷🍙 Varkenshaas met rijst",
+    vlag: "/flags/cn.svg",
+    afbeelding: "/dishes/varkenshaashoningsojasausrijst.png",
+    categorieen: ["Rijst 🍙", "Varken 🐷"],
+    ingredienten: ["Volgt nog"],
+    recept: [
+  "Recept volgt nog."
+],
+  },
+    {
+    naam: "🐔🍙 Kipkerrie",
+    vlag: "/flags/in.svg",
+    afbeelding: "/dishes/kipkerrie.jpg",
+    categorieen: ["Rijst 🍙", "Kip 🐔"],
+    ingredienten: ["Volgt nog"],
+    recept: [
+  "Recept volgt nog."
+],
+  },
+    {
+    naam: "🐔🌯 Kipwrap",
+    vlag: "/flags/us.svg",
+    afbeelding: "/dishes/kipwrap.jpg",
+    categorieen: ["Wraps 🌯", "Kip 🐔"],
+    ingredienten: ["Volgt nog"],
+    recept: [
+  "Recept volgt nog."
+],
+  },
+    {
+    naam: "🐔🍟 Kipsaté",
+    vlag: "/flags/id.svg",
+    afbeelding: "/dishes/kipsate.jpg",
+    categorieen: ["Friet 🍟", "Kip 🐔"],
+    ingredienten: ["Volgt nog"],
+    recept: [
+  "Recept volgt nog."
+],
+  },
+    {
+    naam: "🐮 Hamburgers",
+    vlag: "/flags/us.svg",
+    afbeelding: "/dishes/hamburger.jpg",
+    categorieen: ["Gehakt 🐮"],
     ingredienten: ["Volgt nog"],
     recept: [
   "Recept volgt nog."
@@ -239,13 +355,22 @@ export default function App() {
   haalOpUitOpslag("actieveCategorieen", [])
   );
 
+const [actieveVlaggen, setActieveVlaggen] = useState(() =>
+  haalOpUitOpslag("actieveVlaggen", [])
+);
+
 const zichtbareGerechten = gerechten.filter((gerecht) => {
-  return (
+  const categoriePast =
     actieveCategorieen.length === 0 ||
-      actieveCategorieen.every((categorie) =>
-        gerecht.categorieen.includes(categorie)
-      )
-  );
+    actieveCategorieen.every((categorie) =>
+      gerecht.categorieen.includes(categorie)
+    );
+
+  const vlagPast =
+    actieveVlaggen.length === 0 ||
+    actieveVlaggen.includes(gerecht.vlag);
+
+  return categoriePast && vlagPast;
 });
 
   useEffect(() => {
@@ -272,11 +397,23 @@ useEffect(() => {
   localStorage.setItem("actieveCategorieen", JSON.stringify(actieveCategorieen));
 }, [actieveCategorieen]);
 
+useEffect(() => {
+  localStorage.setItem("actieveVlaggen", JSON.stringify(actieveVlaggen));
+}, [actieveVlaggen]);
+
 function toggleCategorie(categorie) {
   setActieveCategorieen((vorige) =>
     vorige.includes(categorie)
       ? vorige.filter((item) => item !== categorie)
       : [...vorige, categorie]
+  );
+}
+
+function toggleVlag(vlag) {
+  setActieveVlaggen((vorige) =>
+    vorige.includes(vlag)
+      ? vorige.filter((item) => item !== vlag)
+      : [...vorige, vlag]
   );
 }
 
@@ -289,6 +426,7 @@ function resetAlles() {
   setIngredientenThuis([]);
   setGekozenGerecht(null);
   setActieveCategorieen([]);
+  setActieveVlaggen([]);
 }
 
 function toggleIngredientThuis(ingredient) {
@@ -305,11 +443,15 @@ function toggleIngredientThuis(ingredient) {
 
       const categoriePast =
         actieveCategorieen.length === 0 ||
-          actieveCategorieen.every((categorie) =>
-            gerecht.categorieen.includes(categorie)
-          )
+        actieveCategorieen.every((categorie) =>
+          gerecht.categorieen.includes(categorie)
+        );
 
-      return nietVerboden && categoriePast;
+      const vlagPast =
+        actieveVlaggen.length === 0 ||
+        actieveVlaggen.includes(gerecht.vlag);
+
+      return nietVerboden && categoriePast && vlagPast;
     });
 
     if (beschikbareGerechten.length === 0) {
@@ -375,6 +517,10 @@ const alleIngredienten = [
   ...actieveGerechtIngredienten,
 ];
 
+const alleVlaggen = [
+  ...new Set(gerechten.map((gerecht) => gerecht.vlag).filter(Boolean))
+];
+
 const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
   (ingredient) => !ingredientenThuis.includes(ingredient)
 );
@@ -401,6 +547,35 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
   </div>
 
 <p className="categories-info"><i>Geen categorie aangevinkt = alles mag.</i></p>
+
+<h2>Landen</h2>
+
+<div className="categories">
+  {alleVlaggen.map((vlag) => (
+    <label key={vlag} className="checkbox-pill">
+      <input
+        type="checkbox"
+        checked={actieveVlaggen.includes(vlag)}
+        onChange={() => toggleVlag(vlag)}
+      />
+
+      {" "}
+
+      <img
+        src={vlag}
+        alt=""
+        style={{
+          width: "22px",
+          height: "22px",
+          borderRadius: "50%",
+          objectFit: "cover",
+          verticalAlign: "middle",
+        }}
+      />
+    </label>
+  ))}
+</div>
+
 </section>
 
 <div className="buttons">
@@ -409,38 +584,55 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
 </div>
 
       {gekozenGerecht && (
-        <div style={{ marginTop: "24px", border: "1px solid #ccc", padding: "16px" }}>
-          <h2>{gekozenGerecht.naam}</h2>
+<div className="result-card">
+  {gekozenGerecht.vlag && (
+    <img
+      src={gekozenGerecht.vlag}
+      alt=""
+      className="result-flag"
+    />
+  )}
 
-          {gekozenGerecht.ingredienten && (
-  <div>
-    <h3>Ingrediënten</h3>
+  <h2>{gekozenGerecht.naam}</h2>
 
-    {gekozenGerecht.ingredienten.map((ingredient) => (
-      <label key={ingredient} style={{ display: "block" }}>
-        <input
-          type="checkbox"
-          checked={ingredientenThuis.includes(ingredient)}
-          onChange={() => toggleIngredientThuis(ingredient)}
-        />
-        {" "}
-        {ingredient}
-      </label>
-    ))}
-  </div>
+  {gekozenGerecht.afbeelding && (
+  <img
+    src={gekozenGerecht.afbeelding}
+    alt={gekozenGerecht.naam}
+    className="dish-image"
+  />
 )}
 
-{gekozenGerecht.recept && (
-  <div>
-    <h3>Recept</h3>
-    <ol>
-      {gekozenGerecht.recept.map((stap, index) => (
-        <li key={index}>{stap}</li>
+  {gekozenGerecht.ingredienten && (
+    <div>
+      <h3>Ingrediënten</h3>
+
+      {gekozenGerecht.ingredienten.map((ingredient) => (
+        <label key={ingredient} style={{ display: "block" }}>
+          <input
+            type="checkbox"
+            checked={ingredientenThuis.includes(ingredient)}
+            onChange={() => toggleIngredientThuis(ingredient)}
+          />
+          {" "}
+          {ingredient}
+        </label>
+      ))}
+    </div>
+  )}
+
+  {gekozenGerecht.recept && (
+    <div>
+      <h3>Recept</h3>
+
+      <ol>
+        {gekozenGerecht.recept.map((stap, index) => (
+          <li key={index}>{stap}</li>
         ))}
-        </ol>
-        </div>
-      )}
-      </div>
+      </ol>
+    </div>
+  )}
+</div>
     )}
 
 <section className="card">
@@ -448,7 +640,22 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
 
   {zichtbareGerechten.map((gerecht) => (
     <div key={gerecht.naam} className="dish-row">
-      <strong>{gerecht.naam}</strong>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+  {gerecht.vlag && (
+    <img
+      src={gerecht.vlag}
+      alt=""
+      style={{
+        width: "22px",
+        height: "22px",
+        borderRadius: "50%",
+        objectFit: "cover",
+      }}
+    />
+  )}
+
+  <strong>{gerecht.naam}</strong>
+</div>
 
       <div className="dish-actions">
         <button onClick={() => toggleFavoriet(gerecht.naam)}>

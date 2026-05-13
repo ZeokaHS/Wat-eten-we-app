@@ -1,8 +1,6 @@
 body {
-  margin: 0;
-  background: #12141c;
-  color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #1f2329, #121417);
+  color: #f3f4f6;
 }
 
 .app {
@@ -18,11 +16,17 @@ h1 {
 }
 
 .card {
-  background: #1c1f2a;
-  border: 1px solid #2d3140;
-  border-radius: 18px;
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 22px;
   padding: 20px;
-  margin-bottom: 20px;
+
+  backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.35);
 }
 
 .card h2 {
@@ -36,10 +40,29 @@ h1 {
 }
 
 .checkbox-pill {
-  background: #2a2e3b;
+  background: rgba(255,255,255,0.05);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  color: #f3f4f6;
+
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 10px 14px;
+
+  transition: all 0.2s ease;
+}
+
+.checkbox-pill:hover {
   cursor: pointer;
+}
+
+.checkbox-pill:has(input:checked) {
+  background: linear-gradient(
+    135deg,
+    #ff7a18,
+    #ff4d4d
+  );
+  border-color: transparent;
 }
 
 .buttons {
@@ -50,26 +73,42 @@ h1 {
 }
 
 button {
-  border: 0;
-  border-radius: 10px;
-  padding: 10px 14px;
-  background: #6d6f78;
+  background: linear-gradient(
+    135deg,
+    #7f1d1d,
+    #991b1b
+  );
+
   color: white;
-  font-weight: bold;
-  cursor: pointer;
+
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 999px;
+
+  padding: 12px 18px;
+
+  font-size: 16px;
+
+  box-shadow:
+    0 10px 24px rgba(120, 20, 20, 0.28);
+
+  transition: all 0.2s ease;
 }
 
 button:hover {
-  background: #858894;
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  cursor: pointer;
 }
 
 .dish-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid #2d3140;
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.06);
+
+  border-radius: 16px;
+
+  padding: 14px;
+  margin-bottom: 10px;
 }
 
 .dish-actions {
@@ -87,6 +126,10 @@ select {
   color: white;
 }
 
+select:hover {
+  cursor: pointer;
+}
+
 .week-row {
   display: grid;
   grid-template-columns: 120px 1fr;
@@ -100,4 +143,75 @@ select {
 
 .categories-info {
   margin-top: 16px;
+}
+
+.result-card {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 24px;
+  margin: 24px 0;
+
+  backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.35);
+
+  position: relative;
+  overflow: hidden;
+}
+
+select {
+  background: rgba(255,255,255,0.06);
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 12px;
+
+  padding: 10px;
+}
+
+.result-flag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 50%;
+  object-fit: cover;
+
+  pointer-events: none;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.dish-image {
+  width: auto;
+  max-width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 12px 0 20px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.28);
 }

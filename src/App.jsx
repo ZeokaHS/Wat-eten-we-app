@@ -389,6 +389,50 @@ const [actieveVlaggen, setActieveVlaggen] = useState(() =>
   haalOpUitOpslag("actieveVlaggen", [])
 );
 
+const categorieStatistieken = {};
+
+Object.entries(statistieken).forEach(([gerechtNaam, aantal]) => {
+  const gerecht = gerechten.find((g) => g.naam === gerechtNaam);
+
+  if (!gerecht) return;
+
+  gerecht.categorieen.forEach((categorie) => {
+    categorieStatistieken[categorie] =
+      (categorieStatistieken[categorie] || 0) + aantal;
+  });
+});
+
+const vlagStatistieken = {};
+
+Object.entries(statistieken).forEach(([gerechtNaam, aantal]) => {
+  const gerecht = gerechten.find((g) => g.naam === gerechtNaam);
+
+  if (!gerecht || !gerecht.vlag) return;
+
+  vlagStatistieken[gerecht.vlag] =
+    (vlagStatistieken[gerecht.vlag] || 0) + aantal;
+});
+
+const gerechtGrafiekData = gerechten.map((gerecht) => ({
+  naam: gerecht.naam,
+  aantal: statistieken[gerecht.naam] || 0,
+}));
+
+const categorieGrafiekData = Object.entries(categorieStatistieken).map(
+  ([naam, aantal]) => ({
+    naam,
+    aantal,
+  })
+);
+
+const vlagGrafiekData = Object.entries(vlagStatistieken).map(
+  ([vlag, aantal]) => ({
+    naam: vlag,
+    aantal,
+    isVlag: true,
+  })
+);
+
 const zichtbareGerechten = gerechten.filter((gerecht) => {
   const categoriePast =
     actieveCategorieen.length === 0 ||
@@ -509,6 +553,76 @@ const random =
 
   }
 
+function kiesOpnieuw() {
+  if (!gekozenGerecht || !gekozenGerecht.categorieen) {
+    return;
+  }
+
+  verlaagStatistiek(gekozenGerecht.naam);
+
+  const beschikbareGerechten = gerechten.filter((gerecht) => {
+    const nietVerboden = !verbodenVandaag.includes(gerecht.naam);
+
+    const nietHetzelfde =
+      gerecht.naam !== gekozenGerecht.naam;
+
+    const categoriePast =
+      actieveCategorieen.length === 0 ||
+      actieveCategorieen.every((categorie) =>
+        gerecht.categorieen.includes(categorie)
+      );
+
+    const vlagPast =
+      actieveVlaggen.length === 0 ||
+      actieveVlaggen.includes(gerecht.vlag);
+
+    return nietVerboden && nietHetzelfde && categoriePast && vlagPast;
+  });
+
+  if (beschikbareGerechten.length === 0) {
+    setGekozenGerecht({ naam: "Geen alternatief gevonden 😅" });
+    return;
+  }
+
+  const gewogenGerechten = beschikbareGerechten.flatMap((gerecht) =>
+    favorieten.includes(gerecht.naam)
+      ? [gerecht, gerecht]
+      : [gerecht]
+  );
+
+  const random =
+    gewogenGerechten[
+      Math.floor(Math.random() * gewogenGerechten.length)
+    ];
+
+  setGekozenGerecht(random);
+  verhoogStatistiek(random.naam);
+}
+
+  function verhoogStatistiek(gerechtNaam) {
+  setStatistieken((vorigeStats) => ({
+    ...vorigeStats,
+    [gerechtNaam]: (vorigeStats[gerechtNaam] || 0) + 1,
+  }));
+}
+
+function verlaagStatistiek(gerechtNaam) {
+  setStatistieken((vorigeStats) => {
+    const huidigAantal = vorigeStats[gerechtNaam] || 0;
+
+    if (huidigAantal <= 1) {
+      const nieuweStats = { ...vorigeStats };
+      delete nieuweStats[gerechtNaam];
+      return nieuweStats;
+    }
+
+    return {
+      ...vorigeStats,
+      [gerechtNaam]: huidigAantal - 1,
+    };
+  });
+}
+
   function toggleFavoriet(naam) {
     setFavorieten((vorige) =>
       vorige.includes(naam)
@@ -554,6 +668,48 @@ const alleVlaggen = [
 const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
   (ingredient) => !ingredientenThuis.includes(ingredient)
 );
+
+function StatistiekGrafiek({ data, bewerkbaar = false }) {
+  if (data.length === 0) {
+    return <p>Nog geen statistieken.</p>;
+  }
+
+  const hoogsteAantal = Math.max(...data.map((item) => item.aantal), 1);
+
+  return (
+    <div className="simple-chart">
+      {data.map((item) => (
+        <div key={item.naam} className="chart-row">
+          <div className="chart-label">
+            {item.isVlag ? (
+              <img src={item.naam} alt="" className="chart-flag" />
+            ) : (
+              item.naam
+            )}
+          </div>
+
+          <div className="chart-bar-background">
+            <div
+              className="chart-bar"
+              style={{
+                width: `${(item.aantal / hoogsteAantal) * 100}%`,
+              }}
+            >
+              {item.aantal}x
+            </div>
+          </div>
+
+          {bewerkbaar && (
+            <div className="stat-buttons">
+              <button onClick={() => verlaagStatistiek(item.naam)}>-</button>
+              <button onClick={() => verhoogStatistiek(item.naam)}>+</button>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
 
   return (
     <div className="app">
@@ -610,6 +766,7 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
 
 <div className="buttons">
   <button onClick={kiesGerecht}>Kies willekeurig gerecht</button>
+  <button onClick={kiesOpnieuw} disabled={!gekozenGerecht || !gekozenGerecht.categorieen}>Kies opnieuw</button>
   <button onClick={resetAlles}>Reset alles</button>
 </div>
 
@@ -714,8 +871,8 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
 
       {["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"].map(
         (dag) => (
-          <div key={dag}>
-            <strong>{dag}: </strong>
+          <div key={dag} className="weekplanning-row">
+            <strong className="weekplanning-day">{dag}:</strong>
             <select
               value={weekplanning[dag] || ""}
               onChange={(e) => planGerecht(dag, e.target.value)}
@@ -731,15 +888,19 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
         )
       )}
 
-      <h2>Statistieken</h2>
+<section className="card">
+  <h2>Statistieken</h2>
 
-      <ul>
-        {Object.entries(statistieken).map(([naam, aantal]) => (
-          <li key={naam}>
-            {naam}: {aantal}x gekozen
-          </li>
-        ))}
-      </ul>
+  <h3>Gerechten</h3>
+  <StatistiekGrafiek data={gerechtGrafiekData} bewerkbaar />
+
+  <h3>Categorieën</h3>
+  <StatistiekGrafiek data={categorieGrafiekData} />
+
+  <h3>Landen</h3>
+  <StatistiekGrafiek data={vlagGrafiekData} />
+</section>
+
     </div>
   );
 }

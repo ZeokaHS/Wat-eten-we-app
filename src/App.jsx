@@ -665,7 +665,6 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
 </div>
     )}
 
-
       <h2>Boodschappenlijst</h2>
 
       <ul>
@@ -711,19 +710,6 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
   ))}
 </section>
 
-      <h2>Statistieken</h2>
-
-      <ul>
-        {Object.entries(statistieken).map(([naam, aantal]) => (
-          <li key={naam}>
-            {naam}: {aantal}x gekozen
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
-
             <h2>Weekplanning</h2>
 
       {["Maandag", "Dinsdag", "Woensdag", "Donderdag", "Vrijdag", "Zaterdag", "Zondag"].map(
@@ -744,3 +730,16 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
           </div>
         )
       )}
+
+      <h2>Statistieken</h2>
+
+      <ul>
+        {Object.entries(statistieken).map(([naam, aantal]) => (
+          <li key={naam}>
+            {naam}: {aantal}x gekozen
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}

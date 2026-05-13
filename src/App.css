@@ -253,35 +253,35 @@ select {
 .simple-chart {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   margin: 16px 0 28px;
 }
 
 .chart-row {
   display: grid;
-  grid-template-columns: 180px 1fr auto;
+  grid-template-columns: 1fr auto;
   grid-template-areas:
-    "label bar buttons";
-  gap: 12px;
+    "label buttons"
+    "bar bar";
+  gap: 8px 12px;
   align-items: center;
+
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 14px;
 }
 
-@media (max-width: 600px) {
-  .chart-row {
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "label buttons"
-      "bar bar";
-    gap: 8px 12px;
-  }
+.chart-row:hover {
+  background: rgba(255,255,255,0.06);
+}
 
-  .chart-bar-background {
-    width: 100%;
-  }
+.chart-bar-background {
+  width: 100%;
+}
 
-  .chart-label {
-    font-size: 14px;
-  }
+.chart-label {
+  font-size: 14px;
 }
 
 .stat-buttons {
@@ -295,14 +295,6 @@ select {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.chart-label {
-  grid-area: label;
-}
-
-.chart-bar-background {
-  grid-area: bar;
 }
 
 .chart-bar {

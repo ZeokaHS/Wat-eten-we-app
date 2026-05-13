@@ -699,12 +699,14 @@ function StatistiekGrafiek({ data, bewerkbaar = false }) {
             </div>
           </div>
 
-          {bewerkbaar && (
-            <div className="stat-buttons">
-              <button onClick={() => verlaagStatistiek(item.naam)}>-</button>
-              <button onClick={() => verhoogStatistiek(item.naam)}>+</button>
-            </div>
-          )}
+          <div className="stat-buttons">
+            {bewerkbaar && (
+              <>
+                <button onClick={() => verlaagStatistiek(item.naam)}>-</button>
+                <button onClick={() => verhoogStatistiek(item.naam)}>+</button>
+              </>
+            )}
+          </div>
         </div>
       ))}
     </div>

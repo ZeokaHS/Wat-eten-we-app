@@ -665,6 +665,15 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
 </div>
     )}
 
+
+      <h2>Boodschappenlijst</h2>
+
+      <ul>
+        {uniekeBoodschappen.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+
 <section className="card">
   <h2>Gerechten</h2>
 
@@ -702,13 +711,18 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
   ))}
 </section>
 
-      <h2>Boodschappenlijst</h2>
+      <h2>Statistieken</h2>
 
       <ul>
-        {uniekeBoodschappen.map((item) => (
-          <li key={item}>{item}</li>
+        {Object.entries(statistieken).map(([naam, aantal]) => (
+          <li key={naam}>
+            {naam}: {aantal}x gekozen
+          </li>
         ))}
       </ul>
+    </div>
+  );
+}
 
             <h2>Weekplanning</h2>
 
@@ -730,16 +744,3 @@ const uniekeBoodschappen = [...new Set(alleIngredienten)].filter(
           </div>
         )
       )}
-
-      <h2>Statistieken</h2>
-
-      <ul>
-        {Object.entries(statistieken).map(([naam, aantal]) => (
-          <li key={naam}>
-            {naam}: {aantal}x gekozen
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}

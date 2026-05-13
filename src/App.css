@@ -260,13 +260,32 @@ select {
 .chart-row {
   display: grid;
   grid-template-columns: 180px 1fr auto;
+  grid-template-areas:
+    "label bar buttons";
   gap: 12px;
   align-items: center;
 }
 
+@media (max-width: 600px) {
+  .chart-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "label buttons"
+      "bar bar";
+    gap: 8px 12px;
+  }
+
+  .chart-bar-background {
+    width: 100%;
+  }
+
+  .chart-label {
+    font-size: 14px;
+  }
+}
+
 .stat-buttons {
-  display: flex;
-  gap: 6px;
+  grid-area: buttons;
 }
 
 .stat-buttons button {
@@ -279,15 +298,11 @@ select {
 }
 
 .chart-label {
-  font-size: 14px;
-  opacity: 0.9;
-  overflow-wrap: anywhere;
+  grid-area: label;
 }
 
 .chart-bar-background {
-  background: rgba(255,255,255,0.06);
-  border-radius: 999px;
-  overflow: hidden;
+  grid-area: bar;
 }
 
 .chart-bar {

@@ -18,7 +18,7 @@ const startGerechten = [
     vlag: "/flags/sr.svg",
     afbeelding: "/dishes/bootjehetekip.jpg",
     categorieen: ["Kip 🐔"],
-    ingredienten: ["400 gram kippendij", "4 eetlepels ketjap", "5 eetlepels sweet chilisaus", "sambal naar smaak", "1 eetlepel pindakaas", "zonnebloemolie", "2 teentjes knoflook", "1 paprika", "1 rode ui", "pita broodjes", "ijsbergsla"],
+    ingredienten: ["400 gram kippendij", "4 eetlepels ketjap", "5 eetlepels sweet chilisaus", "Sambal naar smaak", "1 eetlepel pindakaas", "Scheutje zonnebloemolie", "2 teentjes knoflook", "1 paprika", "1 rode ui", "Pita broodjes", "Ijsbergsla", "Bakpapier"],
     recept: [
   "Snij de rode ui in kleine stukjes en de paprika in reepjes. (of ook in kleine stukjes als je dat lekkerder vindt! Reepjes hebben mijn voorkeur in dit recept)",
   "Hak je kippendijen in blokjes en marineer met de ketjap, sweet chilisaus, sambal, pindakaas en knoflook",
@@ -35,7 +35,7 @@ const startGerechten = [
     vlag: "/flags/at.svg",
     afbeelding: "/dishes/kaiserschmarnn.jpg",
     categorieen: ["Vegetarisch 🌿"],
-    ingredienten: ["4 eieren", "50g kristalsuiker", "zakje vanillesuiker", "100g bloem", "100 ml melk", "Vanille aroma", "eventueel vleugje kaneel", "zonnebloemolie of boter om mee te bakken"],
+    ingredienten: ["4 eieren", "50g kristalsuiker", "Zakje vanillesuiker", "100g bloem", "100 ml melk", "Vanille aroma", "Eventueel vleugje kaneel", "Zonnebloemolie of boter om mee te bakken"],
     recept: [
   "Pak twee kommen.",
   "In de ene kom de eiwitten, de andere de rest.",
@@ -120,7 +120,7 @@ const startGerechten = [
     vlag: "/flags/tr.svg",
     afbeelding: "/dishes/shoarma.jpg",
     categorieen: ["Kip 🐔"],
-    ingredienten: ["500 gram kipshoarma", "Pita", "1 rode ui", "1 paprika", "Sla", "1/2 komkommer", "Scheutje zonnebloemolie", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus"],
+    ingredienten: ["500 gram kipshoarma", "Pita", "1 rode ui", "1 paprika", "Sla", "1/2 komkommer", "Scheutje zonnebloemolie", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus", "Bakpapier"],
     recept: [
   "Snijd alle groentes.",
   "Voeg de knoflook, yoghurt, honing, peterselie, bieslook en dille samen voor een heerlijke knoflooksaus. Wij mengen dit vaak met een knoflooksaus uit een pot.",
@@ -138,9 +138,15 @@ const startGerechten = [
     vlag: "/flags/nl.svg",
     afbeelding: "/dishes/gebakkenaardappelenpanga.jpg",
     categorieen: ["Aardappelen 🥔", "Vis 🐟"],
-    ingredienten: ["Volgt nog"],
+    ingredienten: ["300 gram vastkokende aardappelen", "2 pangafilets", "Scheutjes olijfolie", "Scheutje chilisaus", "Vismix poeder", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus"],
     recept: [
-  "Recept volgt nog."
+  "Zet een pan met aardappelen en genoeg water om ze in onder te dompelen op.",
+  "Kook de aardappelen gaar en schil ze.",
+  "Stop de geschilde aardappelen in een ovenschaal en besprenkel met olijfolie en chilisaus.",
+  "Verwarm de oven voor op 200 graden en stop in de oven voor 20 minuten.",
+  "Strooi vismix over de pangafilets en bak op in een pan.",
+  "Voeg de knoflook, yoghurt, honing, peterselie, bieslook en dille samen voor een heerlijke knoflooksaus. Wij mengen dit vaak met een knoflooksaus uit een pot.",
+  "Eet smakelijk!"
 ],
   },
   {
@@ -148,9 +154,17 @@ const startGerechten = [
     vlag: "/flags/no.svg",
     afbeelding: "/dishes/gebakkenaardappelenzalm.jpg",
     categorieen: ["Aardappelen 🥔", "Vis 🐟"],
-    ingredienten: ["Volgt nog"],
+    ingredienten: ["300 gram vastkokende aardappelen", "Zalm", "Scheutjes olijfolie", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus"],
     recept: [
-  "Recept volgt nog."
+  "Zet een pan met aardappelen en genoeg water om ze in onder te dompelen op.",
+  "Kook de aardappelen gaar en schil ze.",
+  "Stop de geschilde aardappelen in een ovenschaal en besprenkel met olijfolie en chilisaus.",
+  "Verwarm de oven voor op 200 graden en stop in de oven voor 20 minuten.",
+  "Verwarm een tweede oven voor (die hebben jullie).",
+  "Doe de zalm in een ovenschaal",
+  "Besprenkel de zalm met olijfolie en bak voor 25 minuten in de oven.",
+  "Voeg de knoflook, yoghurt, honing, peterselie, bieslook en dille samen voor een heerlijke knoflooksaus. Wij mengen dit vaak met een knoflooksaus uit een pot.",
+  "Eet smakelijk!"
 ],
   },
   {
@@ -158,9 +172,20 @@ const startGerechten = [
     vlag: "/flags/at.svg",
     afbeelding: "/dishes/gebakkenaardappelenschnitzel.jpg",
     categorieen: ["Aardappelen 🥔", "Kip 🐔"],
-    ingredienten: ["Volgt nog"],
+    ingredienten: ["300 gram vastkokende aardappelen", "Twee kipfilets", "Scheutjes olijfolie", "Scheutjes zonnebloemolie", "Scheutje chilisaus", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus", "Een halve citroen", "1 ei", "Scheutje melk", "Chilimosterd", "Chilipoeder", "Peper", "Panko", "Meel/bloem", "Bakpapier"],
     recept: [
-  "Recept volgt nog."
+  "Zet een pan met aardappelen en genoeg water om ze in onder te dompelen op.",
+  "Kook de aardappelen gaar en schil ze.",
+  "Stop de geschilde aardappelen in een ovenschaal en besprenkel met olijfolie en chilisaus.",
+  "Verwarm de oven voor op 200 graden en stop in de oven voor 20 minuten.",
+  "Snijd de kipfilets doormidden en sla ze plat met een hamer. Tip: Stop hier bakpapier tussen zodat je hamer schoon blijft.",
+  "Maak de werkstations voor de schnitzel: 3 borden, eentje met meel/bloem, eentje met panko en eentje met een eimengsel, scheutje melk, chilimosterd, chilipoeder en peper.",
+  "Verwarm een pan voor op het vuur met flink wat zonnebloemolie. Het moet soort van frituren.",
+  "Ga met de kip eerst door de meel/bloem, daarna door het eimengsel en daarna door de panko.",
+  "Bak de schnitzel in de pan.",
+  "Herhaal met alle kip totdat alles is opgebakken.",
+  "Eet smakelijk!",
+  "Tip: Gebruik citroensap over de schnitzel. Echt heerlijk!"
 ],
   },
   {
@@ -168,13 +193,18 @@ const startGerechten = [
     vlag: "/flags/nl.svg",
     afbeelding: "/dishes/pannekoeken.jpg",
     categorieen: ["Vegetarisch 🌿"],
-    ingredienten: ["Volgt nog"],
+    ingredienten: ["Melk", "Meel/bloem", "1 eetlepel yoghurt", "Vanille aroma", "Zakje vanillesuiker", "2 eieren", "Scheutjes zonnebloemolie of boter om in te bakken", "Nadia: 1 elstar appel", "Nadia: kaneel", "Nadia: bruine suiker", "Nadia: meer yoghurt"],
     recept: [
-  "Recept volgt nog."
+  "Voeg de melk, meel/bloem, yoghurt, vanille aroma, vanille suiker en eieren samen in een beslagkom en meng goed door elkaar.",
+  "Verwarm een pan en doe er olie of boter in.",
+  "Voeg een schep beslag toe in de pan en bak dit op.",
+  "Eet smakelijk!",
+  "Nadia: Snijd de appel in stukjes en voeg kaneel en bruine suiker toe.",
+  "Nadia: Als je pannekoek is gebakken doe je er een schep Yoghurt in, voeg je de stukjes appel toe en klap je de pannekoek dicht als een wrap."
 ],
   },
   {
-    naam: "🐔🍙 Kip Rezala",
+    naam: "🐔🍙 Kip Rezala (Under construction)",
     vlag: "/flags/in.svg",
     afbeelding: "/dishes/rezala.jpg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
@@ -184,7 +214,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍙 Butter Chicken",
+    naam: "🐔🍙 Butter Chicken (Under construction)",
     vlag: "/flags/in.svg",
     afbeelding: "/dishes/butterchicken.jpg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
@@ -194,7 +224,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍙 Tikka Masala",
+    naam: "🐔🍙 Tikka Masala (Under construction)",
     vlag: "/flags/gb.svg",
     afbeelding: "/dishes/tikkamasala.jpg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
@@ -204,7 +234,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🍤🍝 Garnalen pasta in roomsaus",
+    naam: "🍤🍝 Garnalen pasta in roomsaus (Under construction)",
     vlag: "/flags/gb.svg",
     afbeelding: "/dishes/garnalenroompasta.jpg",
     categorieen: ["Pasta 🍝", "Garnalen 🍤"],
@@ -214,7 +244,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍱 Bami",
+    naam: "🐔🍱 Bami (Under construction)",
     vlag: "/flags/cn.svg",
     afbeelding: "/dishes/bami.jpg",
     categorieen: ["Mie 🍱", "Kip 🐔"],
@@ -224,7 +254,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🌯 Quesadillas met kip",
+    naam: "🐔🌯 Quesadillas met kip (Under construction)",
     vlag: "/flags/mx.svg",
     afbeelding: "/dishes/quesadillaskip.jpg",
     categorieen: ["Kip 🐔", "Wraps 🌯"],
@@ -234,7 +264,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐮 Quesadillas met gehakt",
+    naam: "🐮 Quesadillas met gehakt (Under construction)",
     vlag: "/flags/mx.svg",
     afbeelding: "/dishes/quesadillasgehakt.jpg",
     categorieen: ["Gehakt 🐮"],
@@ -244,7 +274,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐮 Mexicaanse schotel",
+    naam: "🐮 Mexicaanse schotel (Under construction)",
     vlag: "/flags/mx.svg",
     afbeelding: "/dishes/mexicaanseschotel.jpg",
     categorieen: ["Gehakt 🐮"],
@@ -254,7 +284,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍙 Omurice",
+    naam: "🐔🍙 Omurice (Under construction)",
     vlag: "/flags/jp.svg",
     afbeelding: "/dishes/omurice.jpg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
@@ -264,7 +294,7 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍙 Kip met honingtijm en sinaasappel",
+    naam: "🐔🍙 Kip met honingtijm en sinaasappel (Under construction)",
     vlag: "/flags/fr.svg",
     afbeelding: "/dishes/kiphoningtijmsinaasappelrijst.jpg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
@@ -274,7 +304,7 @@ const startGerechten = [
 ],
   },
     {
-    naam: "🐷🍙 Varkenshaas met rijst",
+    naam: "🐷🍙 Varkenshaas met rijst (Under construction)",
     vlag: "/flags/cn.svg",
     afbeelding: "/dishes/varkenshaashoningsojasausrijst.png",
     categorieen: ["Rijst 🍙", "Varken 🐷"],
@@ -284,7 +314,7 @@ const startGerechten = [
 ],
   },
     {
-    naam: "🐔🍙 Kipkerrie",
+    naam: "🐔🍙 Kipkerrie (Under construction)",
     vlag: "/flags/in.svg",
     afbeelding: "/dishes/kipkerrie.jpg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
@@ -294,7 +324,7 @@ const startGerechten = [
 ],
   },
     {
-    naam: "🐔🌯 Kipwrap",
+    naam: "🐔🌯 Kipwrap (Under construction)",
     vlag: "/flags/us.svg",
     afbeelding: "/dishes/kipwrap.jpg",
     categorieen: ["Wraps 🌯", "Kip 🐔"],
@@ -304,7 +334,7 @@ const startGerechten = [
 ],
   },
     {
-    naam: "🐔🍟 Kipsaté",
+    naam: "🐔🍟 Kipsaté (Under construction)",
     vlag: "/flags/id.svg",
     afbeelding: "/dishes/kipsate.jpg",
     categorieen: ["Friet 🍟", "Kip 🐔"],
@@ -314,7 +344,7 @@ const startGerechten = [
 ],
   },
     {
-    naam: "🐮 Hamburgers",
+    naam: "🐮 Hamburgers (Under construction)",
     vlag: "/flags/us.svg",
     afbeelding: "/dishes/hamburger.jpg",
     categorieen: ["Gehakt 🐮"],

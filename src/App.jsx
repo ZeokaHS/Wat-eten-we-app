@@ -553,6 +553,10 @@ const random =
 
   }
 
+  function openGerecht(gerecht) {
+    setGekozenGerecht(gerecht);
+  }
+
 function kiesOpnieuw() {
   if (!gekozenGerecht || !gekozenGerecht.categorieen) {
     return;
@@ -836,30 +840,21 @@ function StatistiekGrafiek({ data, bewerkbaar = false }) {
   <h2>Gerechten</h2>
 
   {zichtbareGerechten.map((gerecht) => (
-    <div key={gerecht.naam} className="dish-row">
-      <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+    <div key={gerecht.naam} className="dish-row" onClick={() => openGerecht(gerecht)}>
+      <button className="dish-open-button" onClick={() => openGerecht(gerecht)}>
   {gerecht.vlag && (
-    <img
-      src={gerecht.vlag}
-      alt=""
-      style={{
-        width: "22px",
-        height: "22px",
-        borderRadius: "50%",
-        objectFit: "cover",
-      }}
-    />
+    <img src={gerecht.vlag} alt="" className="dish-list-flag"/>
   )}
 
   <strong>{gerecht.naam}</strong>
-</div>
+</button>
 
       <div className="dish-actions">
-        <button onClick={() => toggleFavoriet(gerecht.naam)}>
+        <button onClick={(e) => {e.stopPropagation(); toggleFavoriet(gerecht.naam);}}>
           {favorieten.includes(gerecht.naam) ? "❤️ Favoriet" : "🤍 Favoriet"}
         </button>
 
-        <button onClick={() => toggleVerbodenVandaag(gerecht.naam)}>
+        <button onClick={(e) => {e.stopPropagation(); toggleVerbodenVandaag(gerecht.naam);}}>
           {verbodenVandaag.includes(gerecht.naam)
             ? "✅ Mag weer"
             : "🚫 Verboden vandaag"}

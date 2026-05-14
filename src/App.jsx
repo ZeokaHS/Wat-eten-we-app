@@ -244,13 +244,24 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍱 Bami (Under construction)",
+    naam: "🐔🍱 Bami",
     vlag: "/flags/cn.svg",
     afbeelding: "/dishes/bami.jpg",
     categorieen: ["Mie 🍱", "Kip 🐔"],
-    ingredienten: ["Volgt nog"],
+    ingredienten: ["Wokolie", "Zonnebloemolie", "1 kilo kip", "Mie voor vier personen", "Prei", "Paprika", "Knoflook", "Ui", "Broccoli", "Wortel", "Sambal naar keuze", "Chilisaus", "Twee soorten ketjap, je weet welke", "Gembersiroop", "1/2 theelepel korianderpoeder", "1/2 theelepel kurkumapoeder", "1/2 theelepel knoflookpoeder", "1/2 theelepel chilipoeder", "1/2 theelepel uienpoeder", "1/2 theelepel komijnpoeder", "1/2 theelepel gemberpoeder", "1/2 theelepel kerriekruidenpoeder", "1/2 theelepel vetsin", "Zwarte peper naar smaak", "half bakje boemboe voor nasi/bami goreng", "1 bouillonblokje"
+    ],
     recept: [
-  "Recept volgt nog."
+  "Hak alle groentes en kip in stukken.",
+  "Marineer de kip in gembersiroop, de twee soorten ketjap, de chilisaus en de knoflook.",
+  "Kook de broccoli voor 10 minuten en houd apart.",
+  "Verwarm een wokpan met wokolie en zonnebloemolie en bak de ui en wortel.",
+  "Voeg daarna de prei toe.",
+  "Zet een pan met water op en kook de mie.",
+  "Voeg de kip, de kruiden, het bouillonblokje en de boemboe toe.",
+  "Wanneer de kip goed is gebakken kun je de paprika toevoegen.",
+  "Bak de paprika niet te lang mee en voeg ten slotte de gekookte broccoli toe.",
+  "Serveer de saus over de mie heen op een bord.",
+  "Eet smakelijk!"
 ],
   },
   {

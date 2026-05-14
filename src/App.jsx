@@ -16,7 +16,7 @@ const startGerechten = [
   {
     naam: "🐔 Bootje hete kip (2 personen)",
     vlag: "/flags/sr.svg",
-    afbeelding: "/dishes/bootjehetekip.jpg",
+    afbeelding: "/dishes/bootjehetekip.jpeg",
     categorieen: ["Kip 🐔"],
     ingredienten: ["400 gram kippendij", "4 eetlepels ketjap", "5 eetlepels sweet chilisaus", "Sambal naar smaak", "1 eetlepel pindakaas", "Scheutje zonnebloemolie", "2 teentjes knoflook", "1 paprika", "1 rode ui", "Pita broodjes", "Ijsbergsla", "Bakpapier"],
     recept: [
@@ -33,7 +33,7 @@ const startGerechten = [
   {
     naam: "🌿 Kaiserschmarnn",
     vlag: "/flags/at.svg",
-    afbeelding: "/dishes/kaiserschmarnn.jpg",
+    afbeelding: "/dishes/kaiserschmarnn.jpeg",
     categorieen: ["Vegetarisch 🌿"],
     ingredienten: ["4 eieren", "50g kristalsuiker", "Zakje vanillesuiker", "100g bloem", "100 ml melk", "Vanille aroma", "Eventueel vleugje kaneel", "Zonnebloemolie of boter om mee te bakken"],
     recept: [
@@ -152,7 +152,7 @@ const startGerechten = [
   {
     naam: "🥔🐟 Gebakken aardappelen met zalm",
     vlag: "/flags/no.svg",
-    afbeelding: "/dishes/gebakkenaardappelenzalm.jpg",
+    afbeelding: "/dishes/aardappelenzalm.jpeg",
     categorieen: ["Aardappelen 🥔", "Vis 🐟"],
     ingredienten: ["300 gram vastkokende aardappelen", "Zalm", "Scheutjes olijfolie", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus"],
     recept: [
@@ -170,7 +170,7 @@ const startGerechten = [
   {
     naam: "🥔🐔 Gebakken aardappelen met schnitzel",
     vlag: "/flags/at.svg",
-    afbeelding: "/dishes/gebakkenaardappelenschnitzel.jpg",
+    afbeelding: "/dishes/aardappelenschnitzel.jpeg",
     categorieen: ["Aardappelen 🥔", "Kip 🐔"],
     ingredienten: ["300 gram vastkokende aardappelen", "Twee kipfilets", "Scheutjes olijfolie", "Scheutjes zonnebloemolie", "Scheutje chilisaus", "3 teentjes knoflook", "3 eetlepels yoghurt", "1 theelepel honing", "1 theelepel peterselie", "1 theelepel bieslook", "1 theelepel dille", "Knoflooksaus", "Een halve citroen", "1 ei", "Scheutje melk", "Chilimosterd", "Chilipoeder", "Peper", "Panko", "Meel/bloem", "Bakpapier"],
     recept: [
@@ -206,7 +206,7 @@ const startGerechten = [
   {
     naam: "🐔🍙 Kip Rezala (Under construction)",
     vlag: "/flags/in.svg",
-    afbeelding: "/dishes/rezala.jpg",
+    afbeelding: "/dishes/rezala.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -216,7 +216,7 @@ const startGerechten = [
   {
     naam: "🐔🍙 Butter Chicken (Under construction)",
     vlag: "/flags/in.svg",
-    afbeelding: "/dishes/butterchicken.jpg",
+    afbeelding: "/dishes/butterchicken.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -226,7 +226,7 @@ const startGerechten = [
   {
     naam: "🐔🍙 Tikka Masala (Under construction)",
     vlag: "/flags/gb.svg",
-    afbeelding: "/dishes/tikkamasala.jpg",
+    afbeelding: "/dishes/tikkamasala.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -236,7 +236,7 @@ const startGerechten = [
   {
     naam: "🍤🍝 Garnalen pasta in roomsaus (Under construction)",
     vlag: "/flags/gb.svg",
-    afbeelding: "/dishes/garnalenroompasta.jpg",
+    afbeelding: "/dishes/garnalenroomsaus.jpeg",
     categorieen: ["Pasta 🍝", "Garnalen 🍤"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -246,7 +246,7 @@ const startGerechten = [
   {
     naam: "🐔🍱 Bami",
     vlag: "/flags/cn.svg",
-    afbeelding: "/dishes/bami.jpg",
+    afbeelding: "/dishes/bami.jpeg",
     categorieen: ["Mie 🍱", "Kip 🐔"],
     ingredienten: ["Wokolie", "Zonnebloemolie", "1 kilo kip", "Mie voor vier personen", "Prei", "Paprika", "Knoflook", "Ui", "Broccoli", "Wortel", "Sambal naar keuze", "Chilisaus", "Twee soorten ketjap, je weet welke", "Gembersiroop", "1/2 theelepel korianderpoeder", "1/2 theelepel kurkumapoeder", "1/2 theelepel knoflookpoeder", "1/2 theelepel chilipoeder", "1/2 theelepel uienpoeder", "1/2 theelepel komijnpoeder", "1/2 theelepel gemberpoeder", "1/2 theelepel kerriekruidenpoeder", "1/2 theelepel vetsin", "Zwarte peper naar smaak", "half bakje boemboe voor nasi/bami goreng", "1 bouillonblokje"
     ],
@@ -277,7 +277,7 @@ const startGerechten = [
   {
     naam: "🐮 Quesadillas met gehakt (Under construction)",
     vlag: "/flags/mx.svg",
-    afbeelding: "/dishes/quesadillasgehakt.jpg",
+    afbeelding: "/dishes/quesadillasgehakt.jpeg",
     categorieen: ["Gehakt 🐮"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -287,7 +287,7 @@ const startGerechten = [
   {
     naam: "🐮 Mexicaanse schotel (Under construction)",
     vlag: "/flags/mx.svg",
-    afbeelding: "/dishes/mexicaanseschotel.jpg",
+    afbeelding: "/dishes/mexicaanseschotel.jpeg",
     categorieen: ["Gehakt 🐮"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -297,7 +297,7 @@ const startGerechten = [
   {
     naam: "🐔🍙 Omurice (Under construction)",
     vlag: "/flags/jp.svg",
-    afbeelding: "/dishes/omurice.jpg",
+    afbeelding: "/dishes/omurice.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -307,7 +307,7 @@ const startGerechten = [
   {
     naam: "🐔🍙 Kip met honingtijm en sinaasappel (Under construction)",
     vlag: "/flags/fr.svg",
-    afbeelding: "/dishes/kiphoningtijmsinaasappelrijst.jpg",
+    afbeelding: "/dishes/honingtijmkip.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -317,7 +317,7 @@ const startGerechten = [
     {
     naam: "🐷🍙 Varkenshaas met rijst (Under construction)",
     vlag: "/flags/cn.svg",
-    afbeelding: "/dishes/varkenshaashoningsojasausrijst.png",
+    afbeelding: "/dishes/varkenshaas.jpeg",
     categorieen: ["Rijst 🍙", "Varken 🐷"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -327,7 +327,7 @@ const startGerechten = [
     {
     naam: "🐔🍙 Kipkerrie (Under construction)",
     vlag: "/flags/in.svg",
-    afbeelding: "/dishes/kipkerrie.jpg",
+    afbeelding: "/dishes/kipkerrie.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [
@@ -347,7 +347,7 @@ const startGerechten = [
     {
     naam: "🐔🍟 Kipsaté (Under construction)",
     vlag: "/flags/id.svg",
-    afbeelding: "/dishes/kipsate.jpg",
+    afbeelding: "/dishes/kipsate.jpeg",
     categorieen: ["Friet 🍟", "Kip 🐔"],
     ingredienten: ["Volgt nog"],
     recept: [

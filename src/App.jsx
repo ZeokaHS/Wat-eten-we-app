@@ -204,13 +204,24 @@ const startGerechten = [
 ],
   },
   {
-    naam: "🐔🍙 Kip Rezala (Under construction)",
+    naam: "🐔🍙 Kip Rezala",
     vlag: "/flags/in.svg",
     afbeelding: "/dishes/rezala.jpeg",
     categorieen: ["Rijst 🍙", "Kip 🐔"],
-    ingredienten: ["Volgt nog"],
+    ingredienten: ["3 eetlepels koolzaadolie", "2 eetlepels knoflook-gemberpasta", "1 ui fijn gesneden", "een snufje zout", "3 groene chili pepers of andere pepers naar smaak", "2 eetlepels kruidenpoeder", "1 theelepel Kashmirichilipoeder", "1 blikje tomatenpuree", "500 ml basiscurrysaus", "800 gram voorgegaarde kip", "70 ml basiscurrysaus of bouillon", "125 ml yoghurt", "1/2 theelepel garam masala", "2 eetlepels gehakte verse koriander", "2 eetlepels boter", "naan brood", "rijst"],
     recept: [
-  "Recept volgt nog."
+  "Snijd de ui, koriander en kip.",
+  "Gaar de kip voor in de voorverwarmde bouillon (lees het boek) en leg apart",
+  "Maak in een kommetje een boemboe van een blikje tomatenpuree, 6 eetlepels water, 70 ml basiscurrysaus (5 eetlepels), de chilipoeder en de kruidenpoeder.",
+  "Doe de koolzaadolie in een pan op middelhoog vuur.",
+  "Voeg de knoflook-gemberpasta toe en bak al roerend voor circa 30 seconden.",
+  "Voeg de ui en een snufje zout toe. Het zout helpt om het vocht aan de ui in de pan te onttrekken. Bak voor ongeveer 3 minuten.",
+  "Voeg nu de chilipepers toe en bak nog eens 30 seconden.",
+  "Meng nu de boemboe door de pan. De saus moet snel verdampen.",
+  "Voeg 125 ml basiscurrysaus (9 eetlepels) toe en 70 ml (5 eetlepels) bouillon. Laat dit zachtes doorkoken tot het dik wordt.",
+  "Zet nu de rijstkoker aan. Vergeet niet ook de oven voor te verwarmen om je naanbrood te verwarmen. Bak het naanbrood.",
+  "Als het weer goed is ingekookt voeg je pas de rest van de basiscurrysaus toe samen met de kip. Laat dit opnieuw dik worden.",
+  "Roer tot slot de yoghurt, garam masala, koriander en boter erdoor. Laat de boter smelten."
 ],
   },
   {
